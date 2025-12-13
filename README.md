@@ -2,7 +2,10 @@
 
 A dynamic, interactive **orbit-style image gallery** built with **React** and **GSAP**. Images smoothly rotate around a central point in a circular path, and you can dynamically **add or remove images** while keeping the spacing evenly distributed.
 
-<video loop src="demo.mp4">Demo Video</video>
+<video autoplay loop muted playsinline width="500">
+  <source src="demo.mp4" type="video/mp4">
+</video>
+
 
 ## Features
 
