@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 24px;
+    min-height: calc(100vh - 5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
