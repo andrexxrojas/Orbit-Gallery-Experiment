@@ -19,6 +19,22 @@ export default function OrbitGallery() {
     useEffect(() => {
         itemsRef.current = itemsRef.current.slice(0, images.length);
 
+        itemsRef.current.forEach((el, i) => {
+            if (!el) return;
+
+            if (i === 0) {
+                // first image → just above newest
+                el.style.zIndex = images.length.toString();
+            } else if (i === images.length - 1) {
+                // newest image → bottom
+                el.style.zIndex = "0";
+            } else {
+                // all other images → in between
+                el.style.zIndex = (images.length - 1 - i).toString();
+            }
+        });
+
+
         const radius = 180;
         const speed = 0.01;
 
@@ -35,8 +51,7 @@ export default function OrbitGallery() {
 
                 gsap.set(el, {
                     x,
-                    y,
-                    zIndex: images.length - i,
+                    y
                 });
             });
         });
