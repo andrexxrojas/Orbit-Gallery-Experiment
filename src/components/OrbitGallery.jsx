@@ -33,12 +33,10 @@ export default function OrbitGallery() {
                 const x = radius * Math.cos(angle);
                 const y = radius * Math.sin(angle);
 
-                const zIndex = Math.round((y + radius) * 100);
-
                 gsap.set(el, {
                     x,
                     y,
-                    zIndex,
+                    zIndex: images.length - i,
                 });
             });
         });
